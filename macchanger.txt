@@ -1,0 +1,23 @@
+macchanger -s eth0(To Know Mac Address)
+sudo macchanger -r eth0
+macchanger -l(Vendors macchanger list)
+macchanger -l > vendormac.txt(save)
+macchanger -l vendormac.txt
+shuf -n 1 vendormac.txt
+awk
+shuf -n 1 vendormac.txt | awk '{ print $3 }'
+printf '%02x' 123
+printf '%02x:%02x:%02x' 47 123 234
+echo $[RANDOM%256]
+printf '%02x:%02x:%02x' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]
+nano randmacgen.sh
+#!/bin/bash
+macchanger -l > vendormac.txt
+ouimac=$(shuf -n 1 vendormac.txt | awk'{print$3}')
+uaamac=$(printf '%02x:%02x:%02x' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256])
+echo "$ouimac:$uaamac"
+chmod +x randmacgen.sh
+./randmac
+
+then again edit the script and change echo "$ouimac:$uaamac" to macchanger -m $ouimac:$uaamac"
+ ./randmacgen.sh
