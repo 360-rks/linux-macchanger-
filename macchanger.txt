@@ -19,5 +19,5 @@ echo "$ouimac:$uaamac"(Save and Exit)
 chmod +x randmacgen.sh
 ./randmac
 
-then again edit the script and change echo "$ouimac:$uaamac" to macchanger -m $ouimac:$uaamac"
+then again edit the script and change echo "$ouimac:$uaamac" to macchanger -m $ouimac:$uaamac" eth0
  ./randmacgen.sh
