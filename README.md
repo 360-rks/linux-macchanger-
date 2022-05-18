@@ -6,3 +6,4 @@
  I have attached a text file you can refer that an change you mac address of your kali machine.
  Run the following commands in your kali machine.
  The mac address will change and any body trying to trace will always be in doubt.
+Note if any command is not working then apply sudo before the command
